@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 987
-  m_MinSize: {x: 683, y: 494}
+  m_MinSize: {x: 681, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 52
+  controlID: 116
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 1546
     height: 987
-  m_MinSize: {x: 406, y: 494}
+  m_MinSize: {x: 404, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 53
+  controlID: 78
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,10 +161,10 @@ MonoBehaviour:
     y: 0
     width: 1546
     height: 703
-  m_MinSize: {x: 406, y: 222}
-  m_MaxSize: {x: 8006, y: 4022}
+  m_MinSize: {x: 404, y: 222}
+  m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 54
+  controlID: 55
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,8 +184,8 @@ MonoBehaviour:
     y: 0
     width: 419
     height: 703
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -266,8 +266,8 @@ MonoBehaviour:
     y: 0
     width: 374
     height: 987
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -386,7 +386,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 52fbffff
+      m_ExpandedIDs: c8f8ffffaaf9fffff6fafffff0340000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -446,9 +446,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 75.92069, y: 411.84375, z: -339.00403}
+    m_Target: {x: -1.3014961, y: 1.0239519, z: 13.862732}
     speed: 2
-    m_Value: {x: 75.92069, y: 411.84375, z: -339.00403}
+    m_Value: {x: -1.3014961, y: 1.0239519, z: 13.862732}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -477,13 +477,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.34131008, y: -0.00084841566, z: 0.00030813643, w: -0.9399526}
+    m_Target: {x: 0.26884702, y: 0.5600666, z: -0.19861424, w: 0.7580424}
     speed: 2
-    m_Value: {x: -0.34130943, y: 0.0005615126, z: -0.00020382849, w: -0.9399508}
+    m_Value: {x: 0.2688431, y: 0.5600584, z: -0.19861135, w: 0.75803137}
   m_Size:
-    m_Target: 1928.4775
+    m_Target: 41.363693
     speed: 2
-    m_Value: 2019.3481
+    m_Value: 41.363693
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -638,20 +638,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Models/pbr_textures/materials
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Models/pbr_textures/materials
+  - Assets
   m_LastFoldersGridSize: 57
-  m_LastProjectPath: C:\Users\Ian\Documents\168-hand-simulator-master\168-hand-simulator-master\168-Project
+  m_LastProjectPath: C:\Users\megac\Documents\Unity Games\168-hand-simulator\168-Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: be300000
-    m_LastClickedID: 12478
-    m_ExpandedIDs: 00000000f02c000028300000c030000000ca9a3b
+    m_SelectedIDs: 64310000
+    m_LastClickedID: 12644
+    m_ExpandedIDs: 000000006431000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -679,7 +679,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f02c0000
+    m_ExpandedIDs: 0000000064310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -707,7 +707,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000203c0000fa9c000008bc0000d0bb000080bc0000763d0200643d02007c3d02002e40000052480000a246000062380000403000004c500000f8390000443d00007638000038440000f4aafeffe8eafeffca310000743900000c3e0000c4ae0000c03e0000064f00001c7e0100047a0100ea0801001e3e0000a63a0000542f00007033000084460000c83d0000ce380000543a00003a3f00007a450000c23d000060400000729e050082410000544b00002e420000424200005442000052420000fc4b00001e4300007e3e0000764200002e3500006c4300007a490000e63c00003843000000000000
+    m_ExpandedInstanceIDs: c6230000203c0000fa9c000008bc0000d0bb000080bc0000763d0200643d02007c3d02002e40000052480000a246000062380000403000004c500000f8390000443d00007638000038440000f4aafeffe8eafeffca310000743900000c3e0000c4ae0000c03e0000064f00001c7e0100047a0100ea0801001e3e0000a63a0000542f00007033000084460000c83d0000ce380000543a00003a3f00007a450000c23d000060400000729e050082410000544b00002e420000424200005442000052420000fc4b00001e4300007e3e0000764200002e3500006c4300007a490000e63c0000384300000000000002370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
