@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 987
-  m_MinSize: {x: 681, y: 494}
-  m_MaxSize: {x: 14002, y: 14044}
+  m_MinSize: {x: 683, y: 494}
+  m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 119
+  controlID: 54
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,8 +266,8 @@ MonoBehaviour:
     y: 0
     width: 374
     height: 987
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -384,9 +384,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ba2b0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e0d4ffff76fbffff083000005e300000
+      m_ExpandedIDs: 76fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -446,9 +446,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.771601, y: 2.0599597, z: 12.113762}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: -2.771601, y: 2.0599597, z: 12.113762}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -477,13 +477,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.06646771, y: 0.9148379, z: -0.16816786, w: 0.36134237}
+    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
-    m_Value: {x: 0.06646123, y: 0.91474867, z: -0.16815147, w: 0.36130714}
+    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-    m_Target: 8.857241
+    m_Target: 37.0755
     speed: 2
-    m_Value: 8.857241
+    m_Value: 37.0755
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -638,20 +638,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Hand_Assets
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Hand_Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\megac\Documents\Unity Games\168-hand-simulator\168-Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7e2d0000
-    m_LastClickedID: 11646
-    m_ExpandedIDs: 00000000a22c000000ca9a3b
+    m_SelectedIDs: 46320000
+    m_LastClickedID: 12870
+    m_ExpandedIDs: 00000000dc2e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -679,7 +679,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a22c0000
+    m_ExpandedIDs: 00000000dc2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -706,7 +706,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000203c0000fa9c000008bc0000d0bb000080bc0000763d0200643d02007c3d02002e40000052480000a246000062380000403000004c500000f8390000443d00007638000038440000f4aafeffe8eafeffca310000743900000c3e0000c4ae0000c03e0000064f00001c7e0100047a0100ea0801001e3e0000a63a0000542f00007033000084460000c83d0000ce380000543a00003a3f00007a450000c23d000060400000729e050082410000544b00002e420000424200005442000052420000fc4b00001e4300007e3e0000764200002e3500006c4300007a490000e63c0000384300000000000002370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
