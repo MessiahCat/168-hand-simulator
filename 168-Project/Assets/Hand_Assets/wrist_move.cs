@@ -6,48 +6,45 @@ public class wrist_move : MonoBehaviour
 {
 
     public string rotateLeft;
-    public string rotateRight;
     public string moveForward;
-    public string moveBack;
     public string moveRight;
-    public string moveLeft;
     public string moveUp;
-    public string moveDown;
     public float moveSpeed = 1f;
     public float rotationAngle = 90f;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(rotateLeft)) {
-            transform.Rotate(new Vector3(0, 0, rotationAngle) * Time.deltaTime * moveSpeed);
-        }
-        else if (Input.GetKey(rotateRight)) {
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(rotateLeft))
+        {
             transform.Rotate(new Vector3(0, 0, -rotationAngle) * Time.deltaTime * moveSpeed);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(moveForward))
+        {
+            transform.position -= new Vector3(0, 0, moveSpeed * Time.deltaTime);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(moveRight))
+        {
+            transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(moveUp))
+        {
+            transform.position -= new Vector3(0, moveSpeed * Time.deltaTime, 0);
+        }
+        else if (Input.GetKey(rotateLeft)) {
+            transform.Rotate(new Vector3(0, 0, rotationAngle) * Time.deltaTime * moveSpeed);
         }
         else if (Input.GetKey(moveForward))
         {
             transform.position += new Vector3(0, 0, moveSpeed * Time.deltaTime);
         }
-        else if (Input.GetKey(moveBack))
-        {
-            transform.position -= new Vector3(0, 0, moveSpeed * Time.deltaTime);
-        }
         else if (Input.GetKey(moveRight))
         {
             transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
         }
-        else if (Input.GetKey(moveLeft))
-        {
-            transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
-        }
         else if (Input.GetKey(moveUp))
         {
             transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
-        }
-        else if (Input.GetKey(moveDown))
-        {
-            transform.position -= new Vector3(0, moveSpeed * Time.deltaTime, 0);
         }
     }
 }
