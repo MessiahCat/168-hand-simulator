@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class wrist_move : MonoBehaviour
-{
-
+{ 
     public string rotateLeft;
     public string moveForward;
     public string moveRight;
     public string moveUp;
     public float moveSpeed = 1f;
     public float rotationAngle = 90f;
+    public Hand_Freeze HandScript;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(rotateLeft))
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(rotateLeft) && !HandScript.frozen)
         {
             transform.Rotate(new Vector3(0, 0, -rotationAngle) * Time.deltaTime * moveSpeed);
         }
@@ -31,7 +31,7 @@ public class wrist_move : MonoBehaviour
         {
             transform.position -= new Vector3(0, moveSpeed * Time.deltaTime, 0);
         }
-        else if (Input.GetKey(rotateLeft)) {
+        else if (Input.GetKey(rotateLeft) && !HandScript.frozen) {
             transform.Rotate(new Vector3(0, 0, rotationAngle) * Time.deltaTime * moveSpeed);
         }
         else if (Input.GetKey(moveForward))
