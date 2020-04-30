@@ -91,6 +91,8 @@
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\ObiFluidPropertyColorizer.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\ViscositySurfTensionToUserData.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\WaveGenerator.cs" />
+    <Compile Include="Assets\Scripts\Water\CollisionEvenHandler.cs" />
+    <Compile Include="Assets\Scripts\Water\WaterConto.cs" />
     <None Include="Assets\Obi\Resources\ObiMaterials\DielectricFluidShader.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ScreenSpaceCurvatureFlow.shader" />
     <None Include="Assets\Obi\CHANGELOG_fluid.txt" />

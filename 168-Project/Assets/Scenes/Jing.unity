@@ -8064,9 +8064,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1972001530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4283895366c340443b5a782fcd5af958, type: 3}
+  m_Script: {fileID: 11500000, guid: 93a27dce062807a4088109090cda8a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killer: {fileID: 253667990}
 --- !u!114 &1972001535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8076,7 +8077,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1972001530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e73097c1aa582444b2ae75649604c6f, type: 3}
+  m_Script: {fileID: 11500000, guid: 608e695d4fd0d9647b235db240383458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killer: {fileID: 253667990}
