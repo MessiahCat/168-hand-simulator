@@ -1085,7 +1085,7 @@ PrefabInstance:
     - target: {fileID: 2685261450585241714, guid: a1ca30e2fa3598049a645b2c896afb51,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.98
+      value: -1.119
       objectReference: {fileID: 0}
     - target: {fileID: 2685261450585241714, guid: a1ca30e2fa3598049a645b2c896afb51,
         type: 3}
@@ -10233,19 +10233,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1993519271}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1041594864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041594863}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cd295a2d235ab44f92bf5377a2a6cf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
 --- !u!114 &1041594865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10380,6 +10367,7 @@ GameObject:
   - component: {fileID: 1182586053}
   - component: {fileID: 1182586052}
   - component: {fileID: 1182586051}
+  - component: {fileID: 1182586054}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10434,7 +10422,7 @@ Camera:
   m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
+  m_ForceIntoRT: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -10453,6 +10441,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 48.316, y: 0, z: 0}
+--- !u!114 &1182586054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182586050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1a04b0b1141422fb89a6def170146d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleRenderers:
+  - {fileID: 2000140028}
+  autoupdate: 1
+  blurRadius: 0.02
+  thicknessCutoff: 1.2
+  colorMaterial: {fileID: 2100000, guid: 9336319734319414e85234bc91cf5254, type: 2}
+  fluidMaterial: {fileID: 2100000, guid: ee4113bcaf3ab4ea889f0efde06e7cca, type: 2}
 --- !u!1 &1311556239 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1159654507556716956, guid: 2412c469a2166ca45a079eb4edc1876a,
