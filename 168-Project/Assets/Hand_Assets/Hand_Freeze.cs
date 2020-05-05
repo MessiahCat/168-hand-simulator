@@ -5,7 +5,15 @@ using UnityEngine;
 public class Hand_Freeze : MonoBehaviour
 {
     public string FreezeKey;
-    public bool frozen = false;
+    public bool frozen = true;
+
+    void Start()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.GetComponent<Rigidbody>().freezeRotation = true;
+        }
+    }
 
     // Update is called once per frame
     void Update()

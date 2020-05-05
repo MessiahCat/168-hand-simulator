@@ -3,31 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterConto : MonoBehaviour
+public class WaterControl2 : MonoBehaviour
 {
-    bool flu;
+    private float timer = 0;
+    public float RunWaterTime = 20;
     GameObject water;
-    // Start is called before the first frame update
+
     void Start()
     {
         water = GameObject.Find("Obi Emitter");
         water.GetComponent<ObiEmitter>().speed = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S) && flu == false)
-        {
-            Debug.Log(1);
+        if (timer >= 0) {
             water.GetComponent<ObiEmitter>().speed = 3;
-            flu = true;
+            timer -= Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.A) && flu == true) 
+        else
         {
-            Debug.Log(2);
             water.GetComponent<ObiEmitter>().speed = 0;
-            flu = false;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        timer = RunWaterTime;
+        
     }
 }

@@ -8,15 +8,29 @@ public class finger_move : MonoBehaviour
     public GameObject Finger_3;
     public float moveSpeed = 1f;
     public float rotationAngle = 90f;
+    public int Hand = 0;
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(key))
+        if (Hand == 1)
         {
-            Finger_3.GetComponent<Rigidbody>().AddForce(0, moveSpeed, 0, ForceMode.Force);
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(key))
+            {
+                Finger_3.GetComponent<Rigidbody>().AddForce(0, moveSpeed, 0, ForceMode.Force);
+            }
+            else if (Input.GetKey(key))
+            {
+                Finger_3.GetComponent<Rigidbody>().AddForce(0, -moveSpeed, 0, ForceMode.Force);
+            }
         }
-        else if (Input.GetKey(key))
-        {
-            Finger_3.GetComponent<Rigidbody>().AddForce(0, -moveSpeed, 0, ForceMode.Force);
+        else {
+            if (Input.GetKey(KeyCode.RightShift) && Input.GetKey(key))
+            {
+                Finger_3.GetComponent<Rigidbody>().AddForce(0, moveSpeed, 0, ForceMode.Force);
+            }
+            else if (Input.GetKey(key))
+            {
+                Finger_3.GetComponent<Rigidbody>().AddForce(0, -moveSpeed, 0, ForceMode.Force);
+            }
         }
     }
 }
