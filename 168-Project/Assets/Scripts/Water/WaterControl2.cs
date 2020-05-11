@@ -5,32 +5,23 @@ using UnityEngine;
 
 public class WaterControl2 : MonoBehaviour
 {
-    private float timer = 0;
-    public float RunWaterTime = 20;
-    GameObject water;
-
+    GameManager GM;
+    public int type = 0;
     void Start()
     {
-        water = GameObject.Find("Obi Emitter");
-        water.GetComponent<ObiEmitter>().speed = 0;
-    }
-
-    void Update()
-    {
-        if (timer >= 0) {
-            water.GetComponent<ObiEmitter>().speed = 3;
-            timer -= Time.deltaTime;
-        }
-        else
-        {
-            water.GetComponent<ObiEmitter>().speed = 0;
-        }
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        timer = RunWaterTime;
-        
+        GM.turnOnWater();
+        if (type == 0)
+        {
+            GM.addColdWater(10);
+        }
+        else {
+            GM.addHotWater(10);
+        }
     }
 }

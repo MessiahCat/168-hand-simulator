@@ -26,7 +26,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
   sceneClasses:
     Assets/Scenes/Main.unity:
     - Class: 1
@@ -961,4 +960,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/megac/Desktop/New folder/168-Project.exe
+  playerPath: C:/Users/megac/Desktop/Hands_Test_Level/168-Project.exe

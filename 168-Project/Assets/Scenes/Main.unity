@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83adfa67a2c80444597bf705da2090d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RunWaterTime: 20
+  type: 1
 --- !u!1 &417547850 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2685261450440207394, guid: a1ca30e2fa3598049a645b2c896afb51,
@@ -803,6 +803,51 @@ BoxCollider:
     type: 3}
   m_PrefabInstance: {fileID: 1993519271}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &648666556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 648666558}
+  - component: {fileID: 648666557}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &648666557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648666556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc40b692aab18343a45ca35d28fd51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hotWaterMax: 50
+  coldWaterMax: -50
+--- !u!4 &648666558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648666556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.30372402, y: -0.2015886, z: 0.37524465}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &763138296 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2685261449553914293, guid: a1ca30e2fa3598049a645b2c896afb51,
@@ -1362,7 +1407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83adfa67a2c80444597bf705da2090d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RunWaterTime: 20
+  type: 0
 --- !u!1 &866945493 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2685261450221740979, guid: a1ca30e2fa3598049a645b2c896afb51,
@@ -1507,7 +1552,6 @@ GameObject:
   - component: {fileID: 910893880}
   - component: {fileID: 910893879}
   - component: {fileID: 910893878}
-  - component: {fileID: 910893877}
   m_Layer: 0
   m_Name: Obi Solver
   m_TagString: Untagged
@@ -1515,18 +1559,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &910893877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910893876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 608e695d4fd0d9647b235db240383458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &910893878
 MonoBehaviour:
   m_ObjectHideFlags: 0
