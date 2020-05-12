@@ -7,21 +7,31 @@ public class WaterControl2 : MonoBehaviour
 {
     GameManager GM;
     public int type = 0;
+    float rotation;
     void Start()
     {
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
-        
     }
 
-    private void OnTriggerEnter(Collider other)
+    void Update()
     {
-        GM.turnOnWater();
-        if (type == 0)
+        rotation = gameObject.transform.rotation.y;
+        if (rotation < 0)
         {
-            GM.addColdWater(10);
+            if (!GM.waterOn) {
+                GM.turnOnWater();
+                GM.waterOn = true;
+            }
+
+            GM.addHotWater(-rotation);
         }
-        else {
-            GM.addHotWater(10);
+        else
+        {
+            if (!GM.waterOn)
+            {
+                GM.turnOffWater();
+                GM.waterOn = false;
+            }
         }
     }
 }

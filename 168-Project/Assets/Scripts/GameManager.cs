@@ -5,9 +5,12 @@ using Obi;
 
 public class GameManager : MonoBehaviour
 {
-    int waterTemp = 0;
-    public int hotWaterMax = 50;
-    public int coldWaterMax = -50;
+    float waterTemp = 0;
+    float hotWaterTemp = 0;
+    float coldWaterTemp = 0;
+    public float hotWaterMax = 50;
+    public float coldWaterMax = -50;
+    public bool waterOn = false;
     GameObject water;
     
     // Start is called before the first frame update
@@ -20,31 +23,36 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        waterTemp = hotWaterTemp + coldWaterTemp;
+    }
+
+    private void FixedUpdate()
+    {
+        print(waterTemp);
     }
 
     public void turnOnWater() {
-        water.GetComponent<ObiEmitter>().speed = 3;
+        water.GetComponent<ObiEmitter>().speed = 1;
     }
 
     public void turnOffWater() {
         water.GetComponent<ObiEmitter>().speed = 0;
     }
 
-    public void addHotWater(int tempurature) {
+    public void addHotWater(float tempurature) {
         if (waterTemp <= hotWaterMax) {
-            waterTemp += tempurature;
+            hotWaterTemp = tempurature;
         }
     }
 
-    public void addColdWater(int tempurature) {
+    public void addColdWater(float tempurature) {
         if (waterTemp >= coldWaterMax)
         {
-            waterTemp += tempurature;
+            waterTemp = tempurature;
         }
     }
 
-    public int tempCheck() {
+    public float tempCheck() {
         return waterTemp;
     }
 }
