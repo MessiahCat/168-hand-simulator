@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     public void addColdWater(float tempurature) {
         if (waterTemp >= coldWaterMax)
         {
-            waterTemp = tempurature;
+            coldWaterTemp = tempurature;
         }
     }
 

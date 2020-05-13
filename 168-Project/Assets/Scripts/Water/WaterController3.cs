@@ -8,6 +8,7 @@ public class WaterController3 : MonoBehaviour
     public int type = 0;
     public float maxVal = 1.5f;
     public float minVal = .5f;
+    public float offset = 0f;
     Rigidbody slider_body;
     
     // Start is called before the first frame update
@@ -26,7 +27,7 @@ public class WaterController3 : MonoBehaviour
                 GM.turnOnWater();
                 GM.waterOn = true;
             }
-            GM.addColdWater(50* -transform.position.y);
+            GM.addColdWater(-50* (transform.position.y-offset));
         }
         else if (transform.position.y < minVal) {
             GM.turnOffWater();

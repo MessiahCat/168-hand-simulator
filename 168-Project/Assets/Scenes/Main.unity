@@ -922,8 +922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTem: 0
-  botton: 0
-  top: 100
+  botton: -50
+  top: 50
   aimstart: 10
   aimend: 20
 --- !u!1 &659101688
@@ -12093,6 +12093,7 @@ MonoBehaviour:
   type: 0
   maxVal: 1.5
   minVal: 0.5
+  offset: 0.5
 --- !u!1 &2000140026
 GameObject:
   m_ObjectHideFlags: 0

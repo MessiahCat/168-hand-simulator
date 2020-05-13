@@ -10,6 +10,7 @@ public class UIcontrol : MonoBehaviour
     GameObject red;
     GameObject green;
     GameObject pointer;
+    GameManager GM;
     float redlength;
     float greenlength;
     float bluelength;
@@ -34,12 +35,14 @@ public class UIcontrol : MonoBehaviour
         red = GameObject.Find("red");
         green = GameObject.Find("green");
         pointer = GameObject.Find("Pointer");
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         CaculateBRGandset();
     }
 
     // Update is called once per frame
     void Update()
     {
+        currentTem = GM.tempCheck();
         PinterContr();
     }
     #region Functions
