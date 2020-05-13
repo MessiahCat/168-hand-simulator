@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\Water\TestSinkMove.cs" />
     <Compile Include="Assets\Scripts\Water\WaterConto.cs" />
     <Compile Include="Assets\Scripts\Water\WaterControl2.cs" />
+    <Compile Include="Assets\Scripts\Water\WaterController3.cs" />
     <None Include="Assets\Obi\Resources\ObiMaterials\DielectricFluidShader.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ScreenSpaceCurvatureFlow.shader" />
     <None Include="Assets\Obi\CHANGELOG_fluid.txt" />

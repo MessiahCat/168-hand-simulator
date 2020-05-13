@@ -26,11 +26,6 @@ public class GameManager : MonoBehaviour
         waterTemp = hotWaterTemp + coldWaterTemp;
     }
 
-    private void FixedUpdate()
-    {
-        print(waterTemp);
-    }
-
     public void turnOnWater() {
         water.GetComponent<ObiEmitter>().speed = 1;
     }

@@ -15,7 +15,7 @@ public class WaterControl2 : MonoBehaviour
 
     void Update()
     {
-        rotation = gameObject.transform.rotation.y;
+        rotation = gameObject.transform.rotation.eulerAngles.y;
         if (rotation < 0)
         {
             if (!GM.waterOn) {
