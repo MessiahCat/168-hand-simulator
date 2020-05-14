@@ -894,7 +894,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hotWaterMax: 50
   coldWaterMax: -50
+  aimTemptop: 10
+  aimTempbot: 0
   waterOn: 0
+  success: 0
+  timer: 0
 --- !u!4 &648666558
 Transform:
   m_ObjectHideFlags: 0

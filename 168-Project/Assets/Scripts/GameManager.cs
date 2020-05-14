@@ -10,7 +10,13 @@ public class GameManager : MonoBehaviour
     float coldWaterTemp = 0;
     public float hotWaterMax = 50;
     public float coldWaterMax = -50;
+    public float aimTemptop = 10;
+    public float aimTempbot = 5;
     public bool waterOn = false;
+    public bool success = false;
+
+    public float timer = 0;
+
     GameObject water;
     
     // Start is called before the first frame update
@@ -23,7 +29,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         waterTemp = hotWaterTemp + coldWaterTemp;
+        waterTempCheck();
+        if (success == true)
+        {
+            Debug.Log("Next step");
+        }
     }
 
     public void turnOnWater() {
@@ -46,7 +58,21 @@ public class GameManager : MonoBehaviour
             coldWaterTemp = tempurature;
         }
     }
-
+    public void waterTempCheck() 
+    {
+        if (waterTemp >= aimTempbot && waterTemp <= aimTemptop)
+        {
+            timer += Time.deltaTime;
+            if (timer >= 3)
+            {
+                success = true;
+            }
+        }
+        else 
+        {
+            timer = 0;
+        }
+    }
     public float tempCheck() {
         return waterTemp;
     }

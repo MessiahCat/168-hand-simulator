@@ -19,13 +19,11 @@ public class UIcontrol : MonoBehaviour
     #endregion
 
     #region variable
-    
-    [SerializeField]
-    public float currentTem;//need to be import from outside.
-    public float botton;
-    public float top;
-    public float aimstart;
-    public float aimend;
+    private float currentTem;//need to be import from outside.
+    private float botton;
+    private float top;
+    private float aimstart;
+    private float aimend;
     #endregion
 
     // Start is called before the first frame update
@@ -36,6 +34,7 @@ public class UIcontrol : MonoBehaviour
         green = GameObject.Find("green");
         pointer = GameObject.Find("Pointer");
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        setupData();
         CaculateBRGandset();
     }
 
@@ -46,6 +45,13 @@ public class UIcontrol : MonoBehaviour
         PinterContr();
     }
     #region Functions
+    private void setupData() 
+    {
+        botton = GM.coldWaterMax;
+        top = GM.hotWaterMax;
+        aimstart = GM.aimTempbot;
+        aimend = GM.aimTemptop;
+    }
     private void CaculateBRGandset() 
     {
         float totalC = top - botton;
