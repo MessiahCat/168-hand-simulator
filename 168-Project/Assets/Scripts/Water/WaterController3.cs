@@ -22,20 +22,46 @@ public class WaterController3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y > minVal && transform.position.y <= maxVal) {
-            if (!GM.waterOn) {
-                GM.turnOnWater();
-                GM.waterOn = true;
+        if (type == 0)
+        {
+            if (transform.position.y > minVal && transform.position.y <= maxVal)
+            {
+                if (!GM.coldWaterOn)
+                {
+                    GM.coldWaterOn = true;
+                    GM.turnOnWater();
+                }
+                GM.addColdWater(-50 * (transform.position.y - offset));
             }
-            GM.addColdWater(-50* (transform.position.y-offset));
+            else if (transform.position.y < minVal)
+            {
+                GM.turnOffWater();
+                transform.position = new Vector3(transform.position.x, minVal, transform.position.z);
+            }
+            else if (transform.position.y > maxVal)
+            {
+                transform.position = new Vector3(transform.position.x, maxVal, transform.position.z);
+            }
         }
-        else if (transform.position.y < minVal) {
-            GM.turnOffWater();
-            GM.waterOn = false;
-            transform.position = new Vector3(transform.position.x, minVal, transform.position.z);
-        }
-        else if (transform.position.y > maxVal) {
-            transform.position = new Vector3(transform.position.x, maxVal, transform.position.z);
+        else {
+            if (transform.position.y > minVal && transform.position.y <= maxVal)
+            {
+                if (!GM.hotWaterOn)
+                {
+                    GM.hotWaterOn = true;
+                    GM.turnOnWater(); 
+                }
+                GM.addHotWater(50 * (transform.position.y - offset));
+            }
+            else if (transform.position.y < minVal)
+            {
+                GM.turnOffWater();
+                transform.position = new Vector3(transform.position.x, minVal, transform.position.z);
+            }
+            else if (transform.position.y > maxVal)
+            {
+                transform.position = new Vector3(transform.position.x, maxVal, transform.position.z);
+            }
         }
     }
 }

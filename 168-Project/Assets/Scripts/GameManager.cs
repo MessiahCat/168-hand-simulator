@@ -12,9 +12,9 @@ public class GameManager : MonoBehaviour
     public float coldWaterMax = -50;
     public float aimTemptop = 10;
     public float aimTempbot = 5;
-    public bool waterOn = false;
+    public bool hotWaterOn = false;
+    public bool coldWaterOn = false;
     public bool success = false;
-
     public float timer = 0;
 
     GameObject water;
@@ -32,18 +32,21 @@ public class GameManager : MonoBehaviour
 
         waterTemp = hotWaterTemp + coldWaterTemp;
         waterTempCheck();
-        if (success == true)
-        {
-            Debug.Log("Next step");
-        }
     }
 
     public void turnOnWater() {
-        water.GetComponent<ObiEmitter>().speed = 1;
+        if (hotWaterOn || coldWaterOn) {
+            water.GetComponent<ObiEmitter>().speed = 1;
+        }
     }
 
     public void turnOffWater() {
-        water.GetComponent<ObiEmitter>().speed = 0;
+        if (hotWaterOn && coldWaterOn) {
+            water.GetComponent<ObiEmitter>().speed = 0;
+            hotWaterOn = false;
+            coldWaterOn = false;
+        }
+        
     }
 
     public void addHotWater(float tempurature) {
