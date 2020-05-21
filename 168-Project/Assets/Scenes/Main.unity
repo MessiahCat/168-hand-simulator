@@ -1021,11 +1021,12 @@ MonoBehaviour:
   hotWaterMax: 50
   coldWaterMax: -50
   aimTemptop: 10
-  aimTempbot: 0
+  aimTempbot: -10
   hotWaterOn: 0
   coldWaterOn: 0
   success: 0
   timer: 0
+  WaterTempBar: {fileID: 861792387}
 --- !u!4 &648666558
 Transform:
   m_ObjectHideFlags: 0
@@ -1777,7 +1778,7 @@ GameObject:
   - component: {fileID: 861792390}
   - component: {fileID: 861792389}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: WaterTempuratureBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

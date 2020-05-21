@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public bool coldWaterOn = false;
     public bool success = false;
     public float timer = 0;
-
+    public GameObject WaterTempBar;
     GameObject water;
     
     // Start is called before the first frame update
@@ -24,12 +24,12 @@ public class GameManager : MonoBehaviour
     {
         water = GameObject.Find("Obi Emitter");
         water.GetComponent<ObiEmitter>().speed = 0;
+        WaterTempBar.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
         waterTemp = hotWaterTemp + coldWaterTemp;
         waterTempCheck();
     }
@@ -37,14 +37,14 @@ public class GameManager : MonoBehaviour
     public void turnOnWater() {
         if (hotWaterOn || coldWaterOn) {
             water.GetComponent<ObiEmitter>().speed = 1;
+            WaterTempBar.SetActive(true);
         }
     }
 
     public void turnOffWater() {
-        if (hotWaterOn && coldWaterOn) {
+        if (!hotWaterOn && !coldWaterOn) {
             water.GetComponent<ObiEmitter>().speed = 0;
-            hotWaterOn = false;
-            coldWaterOn = false;
+            WaterTempBar.SetActive(false);
         }
         
     }

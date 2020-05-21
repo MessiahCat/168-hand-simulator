@@ -41,9 +41,12 @@ public class UIcontrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTem = GM.tempCheck();
-        PinterContr();
+        if (GM.WaterTempBar.activeSelf) {
+            currentTem = GM.tempCheck();
+            PinterContr();
+        }
     }
+
     #region Functions
     private void setupData() 
     {

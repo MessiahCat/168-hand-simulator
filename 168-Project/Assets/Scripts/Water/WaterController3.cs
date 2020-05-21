@@ -22,6 +22,10 @@ public class WaterController3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y > maxVal)
+        {
+            transform.position = new Vector3(transform.position.x, maxVal, transform.position.z);
+        }
         if (type == 0)
         {
             if (transform.position.y > minVal && transform.position.y <= maxVal)
@@ -35,12 +39,9 @@ public class WaterController3 : MonoBehaviour
             }
             else if (transform.position.y < minVal)
             {
+                GM.coldWaterOn = false;
                 GM.turnOffWater();
                 transform.position = new Vector3(transform.position.x, minVal, transform.position.z);
-            }
-            else if (transform.position.y > maxVal)
-            {
-                transform.position = new Vector3(transform.position.x, maxVal, transform.position.z);
             }
         }
         else {
@@ -55,12 +56,9 @@ public class WaterController3 : MonoBehaviour
             }
             else if (transform.position.y < minVal)
             {
+                GM.hotWaterOn = false;
                 GM.turnOffWater();
                 transform.position = new Vector3(transform.position.x, minVal, transform.position.z);
-            }
-            else if (transform.position.y > maxVal)
-            {
-                transform.position = new Vector3(transform.position.x, maxVal, transform.position.z);
             }
         }
     }
