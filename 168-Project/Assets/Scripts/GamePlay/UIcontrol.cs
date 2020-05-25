@@ -26,8 +26,8 @@ public class UIcontrol : MonoBehaviour
     private float aimend;
     #endregion
 
-    // Start is called before the first frame update
-    void Start()
+    // Called once enabled is called before the first frame update
+    void OnEnable()
     {
         blue = GameObject.Find("blue");
         red = GameObject.Find("red");
@@ -42,9 +42,10 @@ public class UIcontrol : MonoBehaviour
     void Update()
     {
         if (GM.WaterTempBar.activeSelf) {
-            currentTem = GM.tempCheck();
+            currentTem = GM.setWaterTemp();
             PinterContr();
         }
+        GM.waterTempCheck();
     }
 
     #region Functions

@@ -30,8 +30,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        waterTemp = hotWaterTemp + coldWaterTemp;
-        waterTempCheck();
+        
+        
     }
 
     public void turnOnWater() {
@@ -45,8 +45,7 @@ public class GameManager : MonoBehaviour
         if (!hotWaterOn && !coldWaterOn) {
             water.GetComponent<ObiEmitter>().speed = 0;
             WaterTempBar.SetActive(false);
-        }
-        
+        }      
     }
 
     public void addHotWater(float tempurature) {
@@ -63,20 +62,24 @@ public class GameManager : MonoBehaviour
     }
     public void waterTempCheck() 
     {
-        if (waterTemp >= aimTempbot && waterTemp <= aimTemptop)
-        {
-            timer += Time.deltaTime;
-            if (timer >= 3)
+        if (!success) {
+            if (waterTemp >= aimTempbot && waterTemp <= aimTemptop)
             {
-                success = true;
+                timer += Time.deltaTime;
+                if (timer >= 3)
+                {
+                    success = true;
+                    print("Success!");
+                }
+            }
+            else
+            {
+                timer = 0;
             }
         }
-        else 
-        {
-            timer = 0;
-        }
     }
-    public float tempCheck() {
+    public float setWaterTemp() {
+        waterTemp = hotWaterTemp + coldWaterTemp;
         return waterTemp;
     }
 }
