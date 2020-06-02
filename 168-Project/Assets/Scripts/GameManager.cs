@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     float waterTemp = 0;
     float hotWaterTemp = 0;
     float coldWaterTemp = 0;
+    bool handsTouched = false;
     public float hotWaterMax = 50;
     public float coldWaterMax = -50;
     public float aimTemptop = 10;
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
     public bool coldWaterOn = false;
     public bool success = false;
     public float timer = 0;
+    public GameObject leftHand;
+    public GameObject rightHand;
     public GameObject WaterTempBar;
     GameObject water;
     
@@ -25,6 +28,7 @@ public class GameManager : MonoBehaviour
         water = GameObject.Find("Obi Emitter");
         water.GetComponent<ObiEmitter>().speed = 0;
         WaterTempBar.SetActive(false);
+        alltouched();
     }
 
     // Update is called once per frame
@@ -82,4 +86,29 @@ public class GameManager : MonoBehaviour
         waterTemp = hotWaterTemp + coldWaterTemp;
         return waterTemp;
     }
+
+    void alltouched() {
+        foreach (Transform child in leftHand.transform) {
+            if (child.gameObject.GetComponent<Touched_Me>().touched)
+            {
+                handsTouched = true;
+            }
+            else {
+                handsTouched = false;
+                return;
+            }
+        }
+        foreach (Transform child in rightHand.transform)
+        {
+            if (child.gameObject.GetComponent<Touched_Me>().touched)
+            {
+                handsTouched = true;
+            }
+            else {
+                handsTouched = false;
+                return;
+            }
+        }
+    }
+
 }

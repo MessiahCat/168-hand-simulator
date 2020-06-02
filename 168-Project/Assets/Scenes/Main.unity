@@ -4594,6 +4594,8 @@ MonoBehaviour:
   coldWaterOn: 0
   success: 0
   timer: 0
+  leftHand: {fileID: 1529656994}
+  rightHand: {fileID: 1157657228}
   WaterTempBar: {fileID: 861792387}
 --- !u!4 &648666558
 Transform:
@@ -8517,6 +8519,12 @@ MonoBehaviour:
   accurateContacts: 0
   useDistanceFields: 0
   distanceField: {fileID: 0}
+--- !u!1 &1157657228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2685261450585241741, guid: a1ca30e2fa3598049a645b2c896afb51,
+    type: 3}
+  m_PrefabInstance: {fileID: 919028182}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1182586050
 GameObject:
   m_ObjectHideFlags: 0
@@ -9045,6 +9053,12 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 2685261450238148521, guid: a1ca30e2fa3598049a645b2c896afb51,
     type: 3}
   m_PrefabInstance: {fileID: 919028182}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1529656994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2685261450585241741, guid: a1ca30e2fa3598049a645b2c896afb51,
+    type: 3}
+  m_PrefabInstance: {fileID: 799964042}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1549134893
 GameObject:

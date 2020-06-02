@@ -20,7 +20,6 @@ public class SoapControl : MonoBehaviour
         saop.GetComponent<ObiEmitter>().speed = 2;
         originalPosition = gameObject.transform.position;
         originalRotation = gameObject.transform.rotation;
-        print(originalPosition);
     }
 
     // Update is called once per frame
