@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Hand_Assets\finger_move.cs" />
     <Compile Include="Assets\Hand_Assets\Hand_Freeze.cs" />
+    <Compile Include="Assets\Hand_Assets\Touched_Me.cs" />
     <Compile Include="Assets\Hand_Assets\wrist_move.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorSpawner.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\AddRandomVelocity.cs" />
