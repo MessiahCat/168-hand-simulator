@@ -93,10 +93,8 @@
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\WaveGenerator.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GamePlay\UIcontrol.cs" />
-    <Compile Include="Assets\Scripts\HandleRotation.cs" />
     <Compile Include="Assets\Scripts\SoapDispencer\SoapControl.cs" />
     <Compile Include="Assets\Scripts\Water\CollisionEvenHandler.cs" />
-    <Compile Include="Assets\Scripts\Water\TestSinkMove.cs" />
     <Compile Include="Assets\Scripts\Water\WaterController3.cs" />
     <None Include="Assets\Obi\Resources\ObiMaterials\DielectricFluidShader.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ScreenSpaceCurvatureFlow.shader" />

@@ -45,7 +45,7 @@ public class UIcontrol : MonoBehaviour
             currentTem = GM.setWaterTemp();
             PinterContr();
         }
-        GM.waterTempCheck();
+        //GM.waterTempCheck();
     }
 
     #region Functions

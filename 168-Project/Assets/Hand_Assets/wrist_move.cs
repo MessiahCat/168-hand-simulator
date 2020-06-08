@@ -18,72 +18,81 @@ public class wrist_move : MonoBehaviour
     {
         if (Hand == 1)
         {
-            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(rotateLeft) && !HandScript.frozen)
-            {
-                transform.Rotate(new Vector3(0, 0, -rotationAngle) * Time.deltaTime * moveSpeed);
-            }
-            else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(moveForward))
-            {
-                transform.position -= new Vector3(0, 0, moveSpeed * Time.deltaTime);
-            }
-            else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(moveRight))
-            {
-                transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
-            }
-            else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(moveUp))
-            {
-                transform.position -= new Vector3(0, moveSpeed * Time.deltaTime, 0);
-            }
-            else if (Input.GetKey(rotateLeft) && !HandScript.frozen)
-            {
-                transform.Rotate(new Vector3(0, 0, rotationAngle) * Time.deltaTime * moveSpeed);
-            }
-            else if (Input.GetKey(moveForward))
-            {
-                transform.position += new Vector3(0, 0, moveSpeed * Time.deltaTime);
-            }
-            else if (Input.GetKey(moveRight))
-            {
-                transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
-            }
-            else if (Input.GetKey(moveUp))
-            {
-                transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
-            }
+            LeftHandControls();
         }
         else {
-            if (Input.GetKey(KeyCode.RightShift) && Input.GetKey(rotateLeft) && !HandScript.frozen)
-            {
-                transform.Rotate(new Vector3(0, 0, -rotationAngle) * Time.deltaTime * moveSpeed);
-            }
-            else if (Input.GetKey(KeyCode.RightShift) && Input.GetKey(moveForward))
-            {
-                transform.position -= new Vector3(0, 0, moveSpeed * Time.deltaTime);
-            }
-            else if (Input.GetKey(KeyCode.RightShift) && Input.GetKey(moveRight))
-            {
-                transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
-            }
-            else if (Input.GetKey(KeyCode.RightShift) && Input.GetKey(moveUp))
-            {
-                transform.position -= new Vector3(0, moveSpeed * Time.deltaTime, 0);
-            }
-            else if (Input.GetKey(rotateLeft) && !HandScript.frozen)
-            {
-                transform.Rotate(new Vector3(0, 0, rotationAngle) * Time.deltaTime * moveSpeed);
-            }
-            else if (Input.GetKey(moveForward))
-            {
-                transform.position += new Vector3(0, 0, moveSpeed * Time.deltaTime);
-            }
-            else if (Input.GetKey(moveRight))
-            {
-                transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
-            }
-            else if (Input.GetKey(moveUp))
-            {
-                transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
-            }
+            RightHandControls();
+        }
+    }
+
+    void LeftHandControls() {
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(rotateLeft) && !HandScript.frozen)
+        {
+            transform.Rotate(new Vector3(0, 0, -rotationAngle) * Time.deltaTime * moveSpeed);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(moveForward))
+        {
+            transform.position -= new Vector3(0, 0, moveSpeed * Time.deltaTime);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(moveRight))
+        {
+            transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(moveUp))
+        {
+            transform.position -= new Vector3(0, moveSpeed * Time.deltaTime, 0);
+        }
+        else if (Input.GetKey(rotateLeft) && !HandScript.frozen)
+        {
+            transform.Rotate(new Vector3(0, 0, rotationAngle) * Time.deltaTime * moveSpeed);
+        }
+        else if (Input.GetKey(moveForward))
+        {
+            transform.position += new Vector3(0, 0, moveSpeed * Time.deltaTime);
+        }
+        else if (Input.GetKey(moveRight))
+        {
+            transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+        }
+        else if (Input.GetKey(moveUp))
+        {
+            transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
+        }
+    }
+
+    void RightHandControls()
+    {
+        if (Input.GetKey(KeyCode.RightShift) && Input.GetKey(rotateLeft) && !HandScript.frozen)
+        {
+            transform.Rotate(new Vector3(0, 0, -rotationAngle) * Time.deltaTime * moveSpeed);
+        }
+        else if (Input.GetKey(KeyCode.RightShift) && Input.GetKey(moveForward))
+        {
+            transform.position -= new Vector3(0, 0, moveSpeed * Time.deltaTime);
+        }
+        else if (Input.GetKey(KeyCode.RightShift) && Input.GetKey(moveRight))
+        {
+            transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+        }
+        else if (Input.GetKey(KeyCode.RightShift) && Input.GetKey(moveUp))
+        {
+            transform.position -= new Vector3(0, moveSpeed * Time.deltaTime, 0);
+        }
+        else if (Input.GetKey(rotateLeft) && !HandScript.frozen)
+        {
+            transform.Rotate(new Vector3(0, 0, rotationAngle) * Time.deltaTime * moveSpeed);
+        }
+        else if (Input.GetKey(moveForward))
+        {
+            transform.position += new Vector3(0, 0, moveSpeed * Time.deltaTime);
+        }
+        else if (Input.GetKey(moveRight))
+        {
+            transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+        }
+        else if (Input.GetKey(moveUp))
+        {
+            transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
         }
     }
 }

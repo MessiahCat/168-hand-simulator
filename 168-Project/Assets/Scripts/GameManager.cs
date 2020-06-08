@@ -8,17 +8,17 @@ public class GameManager : MonoBehaviour
     float waterTemp = 0;
     float hotWaterTemp = 0;
     float coldWaterTemp = 0;
-    bool handsTouched = false;
+    //bool handsTouched = false;
     public float hotWaterMax = 50;
     public float coldWaterMax = -50;
     public float aimTemptop = 10;
     public float aimTempbot = 5;
     public bool hotWaterOn = false;
     public bool coldWaterOn = false;
-    public bool success = false;
+    //public bool success = false;
     public float timer = 0;
-    public GameObject leftHand;
-    public GameObject rightHand;
+    /*public GameObject leftHand;
+    public GameObject rightHand;*/
     public GameObject WaterTempBar;
     GameObject water;
     
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         water = GameObject.Find("Obi Emitter");
         water.GetComponent<ObiEmitter>().speed = 0;
         WaterTempBar.SetActive(false);
-        alltouched();
+        //alltouched();
     }
 
     // Update is called once per frame
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
             coldWaterTemp = tempurature;
         }
     }
-    public void waterTempCheck() 
+    /*public void waterTempCheck() 
     {
         if (!success) {
             if (waterTemp >= aimTempbot && waterTemp <= aimTemptop)
@@ -73,7 +73,6 @@ public class GameManager : MonoBehaviour
                 if (timer >= 3)
                 {
                     success = true;
-                    print("Success!");
                 }
             }
             else
@@ -81,13 +80,13 @@ public class GameManager : MonoBehaviour
                 timer = 0;
             }
         }
-    }
+    }*/
     public float setWaterTemp() {
         waterTemp = hotWaterTemp + coldWaterTemp;
         return waterTemp;
     }
 
-    void alltouched() {
+    /*void alltouched() {
         foreach (Transform child in leftHand.transform) {
             if (child.gameObject.GetComponent<Touched_Me>().touched)
             {
@@ -109,6 +108,6 @@ public class GameManager : MonoBehaviour
                 return;
             }
         }
-    }
+    }*/
 
 }
