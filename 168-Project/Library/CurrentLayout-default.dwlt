@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 128
+  controlID: 60
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 85
+  controlID: 61
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -386,7 +386,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 76fbffff
+      m_ExpandedIDs: b2deffff9ce1ffffece9ffff12eeffff5aeefffff8f8ffff76fbffffaa370000c23c00002e3d0000a63d0000aa3f0000b43f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -446,9 +446,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.44712985, y: -0.029202938, z: 2.095881}
+    m_Target: {x: 652.2242, y: 312.59384, z: -5.721643}
     speed: 2
-    m_Value: {x: 0.44712985, y: -0.029202938, z: 2.095881}
+    m_Value: {x: 652.2242, y: 312.59384, z: -5.721643}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -477,13 +477,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.36488053, y: -0.0033321928, z: 0.0012931725, w: 0.9310662}
+    m_Target: {x: -0.032989804, y: -0.018325048, z: 0.0005814673, w: -0.9993189}
     speed: 2
-    m_Value: {x: 0.36487418, y: -0.0033321348, z: 0.00129315, w: 0.93105}
+    m_Value: {x: -0.032988768, y: -0.018324474, z: 0.0005814491, w: -0.99928755}
   m_Size:
-    m_Target: 7.4682283
+    m_Target: 924.3319
     speed: 2
-    m_Value: 7.4682283
+    m_Value: 967.88684
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -638,20 +638,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/SoapDispencer
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Scripts/SoapDispencer
+  - Assets/Scenes
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\megac\Documents\Unity Games\168-hand-simulator\168-Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: bc2f0000
-    m_LastClickedID: 12220
-    m_ExpandedIDs: 00000000ee2e0000be2f000012300000fc3000003032000080320000d63200008a3400004035000000ca9a3b
+    m_SelectedIDs: a4330000
+    m_LastClickedID: 13220
+    m_ExpandedIDs: 00000000ee2e0000be2f000012300000fc30000030320000803200008a3400004035000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -706,7 +706,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000203c0000fa9c000008bc0000d0bb000080bc0000763d0200643d02007c3d02002e40000052480000a246000062380000403000004c500000f8390000443d00007638000038440000f4aafeffe8eafeffca310000743900000c3e0000c4ae0000c03e0000064f00001c7e0100047a0100ea0801001e3e0000a63a0000542f00007033000084460000c83d0000ce380000543a00003a3f00007a450000c23d000060400000729e050082410000544b00002e420000424200005442000052420000fc4b00001e4300007e3e0000764200002e3500006c4300007a490000e63c00003843000002370000422f0000d238000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
