@@ -66,6 +66,10 @@
     <Compile Include="Assets\Hand_Assets\Hand_Freeze.cs" />
     <Compile Include="Assets\Hand_Assets\Touched_Me.cs" />
     <Compile Include="Assets\Hand_Assets\wrist_move.cs" />
+    <Compile Include="Assets\MagicMirror\Demo\DemoScript.cs" />
+    <Compile Include="Assets\MagicMirror\Prefab\MirrorCameraScript.cs" />
+    <Compile Include="Assets\MagicMirror\Prefab\MirrorReflectionScript.cs" />
+    <Compile Include="Assets\MagicMirror\Prefab\MirrorScript.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorSpawner.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\AddRandomVelocity.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\Blinker.cs" />
@@ -97,8 +101,10 @@
     <Compile Include="Assets\Scripts\SoapDispencer\SoapControl.cs" />
     <Compile Include="Assets\Scripts\Water\CollisionEvenHandler.cs" />
     <Compile Include="Assets\Scripts\Water\WaterController3.cs" />
+    <None Include="Assets\MagicMirror\Prefab\MirrorShaderOld.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\DielectricFluidShader.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ScreenSpaceCurvatureFlow.shader" />
+    <None Include="Assets\MagicMirror\Prefab\MirrorShaderBumpMap.shader" />
     <None Include="Assets\Obi\CHANGELOG_fluid.txt" />
     <None Include="Assets\Obi\Plugins\libOni.bundle\Contents\Resources\CMakeLists.txt" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ParticleShader.shader" />
@@ -107,6 +113,7 @@
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidThickness.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\OpaqueFluidShader.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidColorsBlend.shader" />
+    <None Include="Assets\MagicMirror\Prefab\Readme.txt" />
     <None Include="Assets\Obi\Samples\Fluid\SampleResources\Materials\StandardPerInstanceColor.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\SimpleParticleShader.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\NormalReconstruction.shader" />
@@ -115,34 +122,35 @@
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidColorsOpaque.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\StandardVertexColors.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiEllipsoids.cginc" />
+    <None Include="Assets\MagicMirror\Prefab\MirrorShader.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\DistanceFieldSlice.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiFluids.cginc" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/megac/Documents/Unity Games/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ian/Documents/168-hand-simulator-master/168-hand-simulator-master/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/megac/Documents/Unity Games/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ian/Documents/168-hand-simulator-master/168-hand-simulator-master/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/megac/Documents/Unity Games/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ian/Documents/168-hand-simulator-master/168-hand-simulator-master/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/megac/Documents/Unity Games/168-hand-simulator/168-Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Ian/Documents/168-hand-simulator-master/168-hand-simulator-master/168-hand-simulator/168-Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/megac/Documents/Unity Games/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Ian/Documents/168-hand-simulator-master/168-hand-simulator-master/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/megac/Documents/Unity Games/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ian/Documents/168-hand-simulator-master/168-hand-simulator-master/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/megac/Documents/Unity Games/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ian/Documents/168-hand-simulator-master/168-hand-simulator-master/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/megac/Documents/Unity Games/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Ian/Documents/168-hand-simulator-master/168-hand-simulator-master/168-hand-simulator/168-Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/megac/Documents/Unity Games/168-hand-simulator/168-Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Ian/Documents/168-hand-simulator-master/168-hand-simulator-master/168-hand-simulator/168-Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
