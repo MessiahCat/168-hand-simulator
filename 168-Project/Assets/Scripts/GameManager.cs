@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Obi;
+using System.CodeDom;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class GameManager : MonoBehaviour
     /*public GameObject leftHand;
     public GameObject rightHand;*/
     public GameObject WaterTempBar;
+    public GameObject Mainmenu;
+    public GameObject ControlPannel;
+    public GameObject PauseMenu;
+    private bool gameon = false;
     GameObject water;
     
     // Start is called before the first frame update
@@ -30,6 +35,9 @@ public class GameManager : MonoBehaviour
         water = GameObject.Find("Obi Emitter");
         water.GetComponent<ObiEmitter>().speed = 0;
         WaterTempBar.SetActive(false);
+        ControlPannel.SetActive(false);
+        PauseMenu.SetActive(false);
+        Time.timeScale = 0;
         //alltouched();
     }
 
@@ -38,6 +46,12 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(resetButton)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (Input.GetKeyDown(KeyCode.C)) 
+        {
+            ControlPannel.SetActive(true);
+            PauseMenu.SetActive(false);
+            Time.timeScale = 0;
         }
     }
 
@@ -87,6 +101,35 @@ public class GameManager : MonoBehaviour
     public float setWaterTemp() {
         waterTemp = hotWaterTemp + coldWaterTemp;
         return waterTemp;
+    }
+
+    public void StartButton()
+    {
+        Time.timeScale = 1;
+        Mainmenu.SetActive(false);
+        PauseMenu.SetActive(true);
+        gameon = true;
+    }
+    public void ControlButton() 
+    {
+        Mainmenu.SetActive(false);
+        ControlPannel.SetActive(true);
+
+    }
+
+    public void ControlBackButton() 
+    {
+        if (gameon == false) 
+        {
+            ControlPannel.SetActive(false);
+            Mainmenu.SetActive(true);
+        }
+        if (gameon == true) 
+        {
+            ControlPannel.SetActive(false);
+            Time.timeScale = 1;
+            PauseMenu.SetActive(true);
+        }
     }
 
     /*void alltouched() {
