@@ -15,7 +15,7 @@ public class UIcontrol : MonoBehaviour
     float greenlength;
     float bluelength;
     float barlength;
-    const float totallength = 900f;
+    const float totallength = 800f;
     #endregion
 
     #region variable
@@ -45,7 +45,7 @@ public class UIcontrol : MonoBehaviour
             currentTem = GM.setWaterTemp();
             PinterContr();
         }
-        //GM.waterTempCheck();
+        GM.waterTempCheck();
     }
 
     #region Functions
@@ -76,7 +76,7 @@ public class UIcontrol : MonoBehaviour
 
     private void PinterContr() 
     {
-        pointer.GetComponent<RectTransform>().localPosition = new Vector3(blue.GetComponent<RectTransform>().localPosition.x+((currentTem-botton) / (top - botton)) * 900f, blue.GetComponent<RectTransform>().localPosition.y+5f);
+        pointer.GetComponent<RectTransform>().localPosition = new Vector3(blue.GetComponent<RectTransform>().localPosition.x+((currentTem-botton) / (top - botton)) * totallength, blue.GetComponent<RectTransform>().localPosition.y+5f);
     }
     #endregion
 }

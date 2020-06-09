@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Obi;
 using System.CodeDom;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,13 +13,13 @@ public class GameManager : MonoBehaviour
     float coldWaterTemp = 0;
     //bool handsTouched = false;
     public string resetButton;
-    public float hotWaterMax = 50;
-    public float coldWaterMax = -50;
-    public float aimTemptop = 10;
-    public float aimTempbot = 5;
+    public float hotWaterMax ;
+    public float coldWaterMax ;
+    public float aimTemptop ;
+    public float aimTempbot ;
     public bool hotWaterOn = false;
     public bool coldWaterOn = false;
-    //public bool success = false;
+    public bool success = false;
     public float timer = 0;
     /*public GameObject leftHand;
     public GameObject rightHand;*/
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
     public GameObject Mainmenu;
     public GameObject ControlPannel;
     public GameObject PauseMenu;
+    public GameObject Quest;
+    private int leveler;
     private bool gameon = false;
     GameObject water;
     
@@ -37,6 +40,8 @@ public class GameManager : MonoBehaviour
         WaterTempBar.SetActive(false);
         ControlPannel.SetActive(false);
         PauseMenu.SetActive(false);
+        Quest.SetActive(false);
+        leveler = 0;
         Time.timeScale = 0;
         //alltouched();
     }
@@ -51,10 +56,37 @@ public class GameManager : MonoBehaviour
         {
             ControlPannel.SetActive(true);
             PauseMenu.SetActive(false);
+            Quest.SetActive(false);
             Time.timeScale = 0;
         }
+        GamePlay();
     }
 
+
+    private void GamePlay() 
+    {
+        if (leveler == 0)
+        {
+            Quest.GetComponent<Text>().text = "Quest1:\nopen the water";
+            if (water.GetComponent<ObiEmitter>().speed != 0)
+            {
+                leveler++;
+            }
+        }
+        else if (leveler == 1)
+        {
+            Quest.GetComponent<Text>().text = "Quest2:\nAddjust temperture arrow to the green area. \nHold for 3 sec";
+            Debug.Log(waterTemp);
+            if (success)
+            {
+                leveler++;
+            }
+        }
+        else 
+        {
+            Quest.GetComponent<Text>().text = "All level passed";
+        }
+    }
     public void turnOnWater() {
         if (hotWaterOn || coldWaterOn) {
             water.GetComponent<ObiEmitter>().speed = 1;
@@ -81,7 +113,7 @@ public class GameManager : MonoBehaviour
             coldWaterTemp = tempurature;
         }
     }
-    /*public void waterTempCheck() 
+    public void waterTempCheck() 
     {
         if (!success) {
             if (waterTemp >= aimTempbot && waterTemp <= aimTemptop)
@@ -97,7 +129,7 @@ public class GameManager : MonoBehaviour
                 timer = 0;
             }
         }
-    }*/
+    }
     public float setWaterTemp() {
         waterTemp = hotWaterTemp + coldWaterTemp;
         return waterTemp;
@@ -108,6 +140,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         Mainmenu.SetActive(false);
         PauseMenu.SetActive(true);
+        Quest.SetActive(true);
         gameon = true;
     }
     public void ControlButton() 
@@ -129,6 +162,7 @@ public class GameManager : MonoBehaviour
             ControlPannel.SetActive(false);
             Time.timeScale = 1;
             PauseMenu.SetActive(true);
+            Quest.SetActive(true);
         }
     }
 
