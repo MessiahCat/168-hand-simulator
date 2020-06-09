@@ -5125,7 +5125,7 @@ MonoBehaviour:
     = Rshift + l \r\n** Move Forward = k\r\n** Move Backward = Rshift + k\r\n** Move
     Right = m\r\n** Move Left = Rshift + m\r\n** Move Up = j\r\n** Move Down = Rshift
     + j\r\n** Flex index finger = u\r\n** Flex middle finger = i\r\n** Flex ring finger
-    = o\r\n** Flex pinky = p"
+    = o\r\n** Flex pinky = p\nReset = y"
 --- !u!222 &680819467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5348,7 +5348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8539,6 +8539,11 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2685261450152381014, guid: a1ca30e2fa3598049a645b2c896afb51,
+        type: 3}
+      propertyPath: Hand
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2685261450163769233, guid: a1ca30e2fa3598049a645b2c896afb51,
         type: 3}
       propertyPath: key
@@ -9243,7 +9248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.2784314}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -9576,7 +9581,7 @@ MonoBehaviour:
     = Lshift + a\r\n** Move Forward = s\r\n** Move Backward = Lshift + s\r\n** Move
     Right = z\r\n** Move Left = Lshift + z\r\n** Move Up = d\r\n** Move Down = Lshift
     + d\r\n** Flex index finger = r\r\n** Flex middle finger = e\r\n** Flex ring finger
-    = w\r\n** Flex pinky = q"
+    = w\r\n** Flex pinky = q\nNote: Frozen hands can't rotate"
 --- !u!222 &1295751041
 CanvasRenderer:
   m_ObjectHideFlags: 0
