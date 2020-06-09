@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Obi;
+using System.Linq;
+
 [RequireComponent(typeof(ObiSolver))]
 public class CollisionEvenHandler : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class CollisionEvenHandler : MonoBehaviour
 
     [SerializeField]
     public Collider killer;
+    public List<Collider> hands;
 
     void Awake()
     {
@@ -45,6 +48,12 @@ public class CollisionEvenHandler : MonoBehaviour
 
                         if (emitter != null)
                             emitter.life[pa.indexInActor] = 0;
+
+                    }
+                    if (hands.Contains(collider))
+                    {
+
+                        collider.gameObject.GetComponent<Touched_Me>().touchedwater = true;
 
                     }
                 }

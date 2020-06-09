@@ -2,9 +2,15 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CollisionEvenHandler
+    - GameManager
     - Hand_Freeze
-    - WaterConto
-    - WaterControl2
+    - MirrorCameraScript
+    - MirrorReflectionScript
+    - MirrorScript
+    - SoapControl
+    - Touched_Me
+    - UIcontrol
+    - WaterController3
     - finger_move
     - wrist_move
     Obi.dll:
@@ -26,6 +32,15 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Main.unity:
     - Class: 1
@@ -44,13 +59,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 43
       Script: {instanceID: 0}
+    - Class: 45
+      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 84
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -59,50 +80,82 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 642}
+      Script: {instanceID: 648}
     - Class: 114
-      Script: {instanceID: 9814}
+      Script: {instanceID: 9754}
     - Class: 114
-      Script: {instanceID: 9832}
+      Script: {instanceID: 9820}
     - Class: 114
-      Script: {instanceID: 9888}
+      Script: {instanceID: 9838}
     - Class: 114
-      Script: {instanceID: 10570}
+      Script: {instanceID: 9894}
     - Class: 114
-      Script: {instanceID: 10626}
+      Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 10740}
+      Script: {instanceID: 10014}
     - Class: 114
-      Script: {instanceID: 10790}
+      Script: {instanceID: 10032}
     - Class: 114
-      Script: {instanceID: 11126}
+      Script: {instanceID: 10458}
     - Class: 114
-      Script: {instanceID: 11342}
+      Script: {instanceID: 10460}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 11400}
+      Script: {instanceID: 10640}
     - Class: 114
-      Script: {instanceID: 11534}
+      Script: {instanceID: 10750}
     - Class: 114
-      Script: {instanceID: 11618}
+      Script: {instanceID: 10804}
     - Class: 114
-      Script: {instanceID: 11698}
+      Script: {instanceID: 10920}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11052}
     - Class: 114
-      Script: {instanceID: 11846}
+      Script: {instanceID: 11116}
+    - Class: 114
+      Script: {instanceID: 11142}
+    - Class: 114
+      Script: {instanceID: 11236}
+    - Class: 114
+      Script: {instanceID: 11360}
+    - Class: 114
+      Script: {instanceID: 11408}
+    - Class: 114
+      Script: {instanceID: 11418}
+    - Class: 114
+      Script: {instanceID: 11502}
+    - Class: 114
+      Script: {instanceID: 11530}
+    - Class: 114
+      Script: {instanceID: 11554}
+    - Class: 114
+      Script: {instanceID: 11686}
+    - Class: 114
+      Script: {instanceID: 11718}
+    - Class: 114
+      Script: {instanceID: 11744}
+    - Class: 114
+      Script: {instanceID: 11866}
+    - Class: 114
+      Script: {instanceID: 11944}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
-      Script: {instanceID: 0}
-    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
     - Class: 144
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -245,6 +298,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MirrorReflectionScript
+  - hash:
+      serializedVersion: 2
       Hash: 234235b9fb07320d11497e08a726cc56
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -255,6 +314,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CollisionEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 4e83dbb98e267112f847f6c7ba29354e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DemoScript
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -279,12 +344,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
-  - hash:
-      serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TestSinkMove
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -401,6 +460,12 @@ ScriptsOnlyBuild:
     className: EventSystem
   - hash:
       serializedVersion: 2
+      Hash: cc96a9cc4e609171e7bc59647f124bad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MirrorCameraScript
+  - hash:
+      serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -429,6 +494,12 @@ ScriptsOnlyBuild:
     assemblyName: Obi.dll
     namespaceName: Obi
     className: ObiFixedUpdater
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuSelect
   - hash:
       serializedVersion: 2
       Hash: 73499cc56a8d226621bc4c0a29fff1f7
@@ -491,10 +562,10 @@ ScriptsOnlyBuild:
     className: Blinker
   - hash:
       serializedVersion: 2
-      Hash: 7a9a535566775110bde955c84dd85a0a
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: WaterControl2
+    className: UIcontrol
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -593,7 +664,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: c84faf4155b509e861f3f3514401019b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -603,6 +674,12 @@ ScriptsOnlyBuild:
     assemblyName: Obi.dll
     namespaceName: Obi
     className: ObiParticleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 4c5c9aac82916216ff13c337e7df7020
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WaterController3
   - hash:
       serializedVersion: 2
       Hash: 224c1606e416ae521d1c7f0fe6738050
@@ -683,6 +760,12 @@ ScriptsOnlyBuild:
     className: ColorRandomizer
   - hash:
       serializedVersion: 2
+      Hash: 1ff59894eba420d811e229a16b27ccbd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Touched_Me
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: Obi
@@ -755,6 +838,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: f5bdd65ad22970db633b5eea4b13aecf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MirrorScript
+  - hash:
+      serializedVersion: 2
       Hash: 9a53a2f27807602da2cff9296517641f
     assemblyName: Obi.dll
     namespaceName: Obi
@@ -765,12 +854,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Obi
     className: ObiCharacter
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: WaterConto
   - hash:
       serializedVersion: 2
       Hash: e8b83a3cbd58d44188556a57b1946698
@@ -789,6 +872,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 4b7848723bcdbcee311cc06bf25e98f2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoapControl
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
@@ -960,4 +1049,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/megac/Desktop/Hands_Test_Level/168-Project.exe
+  playerPath: "C:/Users/Administrator.DESKTOP-KJH8S7E/Desktop/\u65B0\u5EFA\u6587\u4EF6\u5939/168-Project.exe"
