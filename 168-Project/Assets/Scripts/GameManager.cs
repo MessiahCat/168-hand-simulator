@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Obi;
 
 public class GameManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     float hotWaterTemp = 0;
     float coldWaterTemp = 0;
     //bool handsTouched = false;
+    public string resetButton;
     public float hotWaterMax = 50;
     public float coldWaterMax = -50;
     public float aimTemptop = 10;
@@ -34,8 +36,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+        if (Input.GetKeyDown(resetButton)) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void turnOnWater() {
