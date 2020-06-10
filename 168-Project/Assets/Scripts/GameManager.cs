@@ -76,7 +76,6 @@ public class GameManager : MonoBehaviour
         else if (leveler == 1)
         {
             Quest.GetComponent<Text>().text = "Quest 2:\nAddjust temperture arrow to the green area. \nHold for 3 sec";
-            Debug.Log(waterTemp);
             if (success)
             {
                 leveler++;
